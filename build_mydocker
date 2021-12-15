@@ -1,0 +1,11 @@
+if [ -z $1 ]; then
+docker_image_tag=properly-v0.01
+fi
+echo $docker_image_tag
+latest_docker_image=$(docker images|grep ${docker_image_tag}|awk 'BEGIN { } {print $3} END {}')
+if [ -n "${latest_docker_image}" ]; then
+echo "${latest_docker_image} Docker image is getting deleted ..."
+docker image rm -f ${latest_docker_image}
+fi
+echo "Building Docker image ${docker_image_tag} ..."
+docker build -t properly-v0.01 .
