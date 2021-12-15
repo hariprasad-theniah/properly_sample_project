@@ -8,7 +8,9 @@ Create a new directory, and clone this repository into the directory. This repos
 change your cuurent directory to the new directory
 
 The Local IP address need to be modified, to connect to the POSTGRESQL from with in the DOCKER scripts.
+
 vi .env
+
 change the POSTGRES_HOST, value in the file, There should not be any blank spaces between the = operator
 
 POSTGRES_HOST={Your Systems IP Address}
