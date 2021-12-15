@@ -14,6 +14,7 @@ vi .env
 change the POSTGRES_HOST, value in the file, There should not be any blank spaces between the = operator
 
 POSTGRES_HOST={Your Systems IP Address}
+
 save and exit the vi editor
 
 cd ./{new directory name}
