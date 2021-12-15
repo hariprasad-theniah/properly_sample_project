@@ -9,7 +9,7 @@ if __name__ == '__main__':
     db_obj = sync_to_database.db_sync()
     db_obj.connect()
     if not path.isfile("./.is_initialized"):
-        # kaggle_obj.execute_system_command(['touch', './.is_initialized'])
+        kaggle_obj.execute_system_command(['touch', './.is_initialized'])
         db_obj.execute_sqls("./pipeline/database_ddl.sql")
     if len(kaggle_obj.list_of_output_files) > 0:
         kaggle_load_params = {}
